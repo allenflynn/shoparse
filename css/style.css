@@ -349,6 +349,17 @@ template {
 }
 
 /*! normalize.css v8.0.1 end */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--color-grey-dark-2);
+}
+
 *,
 *::before,
 *::after {
@@ -357,12 +368,59 @@ template {
   box-sizing: border-box;
 }
 
-body {
-  font-family: var(--font-primary);
-  font-size: 62.5%;
-  font-weight: 300;
-  line-height: 1.6;
-  color: var(--color-grey-dark-2);
+.header {
+  grid-column: full-start/full-end;
+  display: flex;
+  justify-content: space-between;
+  background-color: yellow;
+}
+
+.hero-banner__left {
+  grid-column: full-start/col-end -3;
+  background-color: green;
+}
+.hero-banner__right {
+  grid-column: col-end -3/full-end;
+  background-color: yellowgreen;
+}
+
+.features {
+  grid-column: center-start/center-end;
+  background-color: red;
+}
+
+.story__pictures {
+  grid-column: full-start/col-start 5;
+  background-color: paleturquoise;
+}
+.story__content {
+  grid-column: col-start 5/full-end;
+  background-color: rebeccapurple;
+}
+
+.clients {
+  grid-column: center-start/center-end;
+  background-color: aquamarine;
+}
+
+.testimonials {
+  grid-column: center-start/center-end;
+  background-color: chartreuse;
+}
+
+.footer {
+  grid-column: full-start/full-end;
+  background-color: teal;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 9rem 65vh min-content 35vw repeat(3, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 18.5rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+.container > * {
+  padding: 40px;
+  font-size: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
