@@ -9,20 +9,56 @@
 
 .heading-2 {
   @extend %heading;
+
+  font-size: 4rem;
+  font-style: italic;
+  line-height: 1;
+
+  &--light {
+    color: var(--color-grey-light-1);
+  }
+  &--dark {
+    color: var(--color-grey-dark-1);
+  }
 }
 
 .heading-3 {
   @extend %heading;
+
+  font-size: 2rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+
+  &--light {
+    color: var(--color-grey-light-1);
+  }
+  &--dark {
+    color: var(--color-grey-dark-1);
+  }
 }
 
 .heading-4 {
   @extend %heading;
+
   font-size: 1.8rem;
 
   &--light {
     color: var(--color-grey-light-1);
   }
-  &--light {
+  &--dark {
     color: var(--color-grey-dark-1);
   }
+}
+
+.mb-sm {
+  margin-bottom: 2rem;
+}
+.mb-md {
+  margin-bottom: 3rem;
+}
+.mb-lg {
+  margin-bottom: 4rem;
+}
+.mb-hg {
+  margin-bottom: 8rem;
 }

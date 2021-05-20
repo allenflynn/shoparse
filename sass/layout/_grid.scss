@@ -23,11 +23,9 @@
 .story {
   &__pictures {
     grid-column: full-start / col-start 5;
-    background-color: paleturquoise;
   }
   &__content {
     grid-column: col-start 5 / full-end;
-    background-color: rebeccapurple;
   }
 }
 
