@@ -1,7 +1,11 @@
 @use 'abstracts/functions';
 @use 'abstracts/mixins';
+@use 'abstracts/placeholder';
 @use 'abstracts/variables';
 
 @use 'base/reset';
+@use 'base/typography';
 
 @use 'layout/grid';
+
+@use 'components/features';

@@ -18,7 +18,6 @@
 
 .features {
   grid-column: center-start / center-end;
-  background-color: red;
 }
 
 .story {
@@ -56,8 +55,4 @@
       [col-start] minmax(min-content, 18.5rem) [col-end]
     )
     [center-end] minmax(6rem, 1fr) [full-end];
-  & > * {
-    padding: 40px;
-    font-size: 3rem;
-  }
 }

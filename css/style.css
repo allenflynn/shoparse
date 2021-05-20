@@ -368,6 +368,21 @@ body {
   box-sizing: border-box;
 }
 
+.heading-4, .heading-3, .heading-2, .heading-1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+.heading-4 {
+  font-size: 1.8rem;
+}
+.heading-4--light {
+  color: var(--color-grey-light-1);
+}
+.heading-4--light {
+  color: var(--color-grey-dark-1);
+}
+
 .header {
   grid-column: full-start/full-end;
   display: flex;
@@ -386,7 +401,6 @@ body {
 
 .features {
   grid-column: center-start/center-end;
-  background-color: red;
 }
 
 .story__pictures {
@@ -418,9 +432,29 @@ body {
   grid-template-rows: 9rem 65vh min-content 35vw repeat(3, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 18.5rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
-.container > * {
-  padding: 40px;
-  font-size: 3rem;
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 5rem;
+  align-items: start;
+  margin: 15rem 0;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 1.5rem 2.5rem;
+}
+.feature__icon {
+  grid-row: 1/span 2;
+  transform: translateY(-0.8rem);
+  height: 4.5rem;
+  width: 4.5rem;
+  fill: var(--color-primary);
+}
+.feature__text {
+  font-size: 1.6rem;
 }
 
 /*# sourceMappingURL=style.css.map */
