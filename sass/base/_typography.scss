@@ -5,6 +5,8 @@
 
 .heading-1 {
   @extend %heading;
+  font-size: 5rem;
+  color: var(--color-grey-light-1);
 }
 
 .heading-2 {

@@ -44,11 +44,6 @@ main {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
 /* Grouping content
    ========================================================================== */
 /**
@@ -374,6 +369,11 @@ body {
   font-weight: 400;
 }
 
+.heading-1 {
+  font-size: 5rem;
+  color: var(--color-grey-light-1);
+}
+
 .heading-2 {
   font-size: 4rem;
   font-style: italic;
@@ -433,7 +433,6 @@ body {
 
 .hero-banner__left {
   grid-column: full-start/col-end -3;
-  background-color: green;
 }
 .hero-banner__right {
   grid-column: col-end -3/full-end;
@@ -453,7 +452,7 @@ body {
 
 .clients {
   grid-column: center-start/center-end;
-  background-color: aquamarine;
+  margin: 15rem 0;
 }
 
 .testimonials {
@@ -463,13 +462,12 @@ body {
 
 .footer {
   grid-column: full-start/full-end;
-  background-color: teal;
 }
 
 .container {
   display: grid;
   grid-template-rows: 9rem 65vh min-content 35vw repeat(3, min-content);
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 18.5rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
 .btn {
@@ -486,6 +484,80 @@ body {
 }
 .btn:hover {
   background-color: var(--color-primary-dark);
+}
+.btn--client {
+  grid-column: span 2;
+}
+.btn--banner {
+  justify-self: start;
+  align-self: start;
+}
+
+.hero-banner__left {
+  display: grid;
+  grid-template-rows: 1fr min-content 6rem 1fr;
+  grid-template-columns: max-content;
+  justify-content: center;
+  gap: 2rem 0;
+  line-height: 1;
+  padding: 9rem;
+  background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/web-dev.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.hero-banner__left .services__title {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  gap: 0 1.5rem;
+  align-items: center;
+  font-size: 1.6rem;
+  color: var(--color-grey-light-2);
+}
+.hero-banner__left .services__title::before, .hero-banner__left .services__title::after {
+  content: "";
+  height: 1px;
+  display: block;
+  background-color: currentColor;
+}
+.hero-banner__left .services__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 5rem;
+  justify-items: center;
+  align-items: center;
+  list-style: none;
+  font-size: 1.8rem;
+  letter-spacing: -0.1px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.hero-banner__right {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 2rem 0;
+  justify-items: center;
+  background-color: var(--color-secondary);
+}
+.hero-banner__right .specialties__list {
+  display: grid;
+  grid-template-columns: min-content max-content;
+  gap: 3vh 3rem;
+  align-items: center;
+}
+
+.circular--landscape {
+  display: inline-block;
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular--landscape img {
+  width: auto;
+  height: 100%;
+  margin-left: -1rem;
 }
 
 .features {
@@ -539,6 +611,85 @@ body {
   justify-items: start;
   background-color: var(--color-grey-light-1);
   padding: 6rem 6vw;
+}
+
+.clients {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 5rem;
+}
+
+.client {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  background-color: var(--color-grey-light-1);
+}
+.client__img {
+  grid-area: 1/1/-1/-1;
+  width: 100%;
+  filter: invert(10%);
+}
+.client__name {
+  grid-area: 1/1/-1/-1;
+  justify-self: center;
+  align-self: end;
+  width: 80%;
+  z-index: 1;
+  transform: translateY(50%);
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 1.2rem;
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+.client__location, .client__traffic {
+  margin-top: 3rem;
+}
+.client__location, .client__traffic, .client__type, .client__industry {
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+}
+.client__location svg, .client__traffic svg, .client__type svg, .client__industry svg {
+  fill: var(--color-primary);
+  height: 2rem;
+  width: 2rem;
+  margin-right: 1rem;
+}
+.footer {
+  background-color: var(--color-secondary);
+  padding: 5rem;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 3rem;
+  list-style: none;
+}
+.nav__link:link, .nav__link:visited {
+  color: white;
+  display: block;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s;
+}
+.nav__link:hover, .nav__link:active {
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-0.5rem);
+}
+
+.copyright {
+  font-size: 1.2rem;
+  color: var(--color-grey-light-2);
+  margin-top: 5rem;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -13,4 +13,13 @@
   &:hover {
     background-color: var(--color-primary-dark);
   }
+
+  &--client {
+    grid-column: span 2;
+  }
+
+  &--banner {
+    justify-self: start;
+    align-self: start;
+  }
 }
