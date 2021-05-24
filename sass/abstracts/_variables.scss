@@ -14,3 +14,9 @@
   --color-grey-dark-1: #54483a;
   --color-grey-dark-2: #6d5d4b;
 }
+
+// Responsive breakpoints
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 56.25em; // 900px
+$bp-small: 40.625em; // 650px

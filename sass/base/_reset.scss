@@ -1,3 +1,5 @@
+@use '../abstracts/variables';
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -351,21 +353,25 @@ template {
 }
 /*! normalize.css v8.0.1 end */
 
-html {
-  font-size: 62.5%; // 1rem = 16px * 62.5% = 10px
-}
-
-body {
-  font-family: var(--font-primary);
-  font-weight: 300;
-  line-height: 1.6;
-  color: var(--color-grey-dark-2);
-}
-
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  line-height: 1.6;
+  font-size: 62.5%; // 1rem = 16px * 62.5% = 10px
+
+  @media (max-width: variables.$bp-largest) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: var(--font-primary);
+  font-weight: 300;
+  color: var(--color-grey-dark-2);
 }
