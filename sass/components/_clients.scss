@@ -1,9 +1,12 @@
+.clients {
+  padding: 15rem 0;
+}
+
 .client {
   background-color: var(--color-grey-light-1);
 
   &__img {
     width: 100%;
-
     filter: invert(10%);
   }
 

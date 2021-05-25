@@ -7,6 +7,7 @@
 @use 'base/typography';
 
 @use 'layout/grid';
+@use 'layout/navigation' as navigation-layout;
 @use 'layout/header' as header-layout;
 @use 'layout/features' as features-layout;
 @use 'layout/story' as story-layout;
@@ -14,6 +15,7 @@
 @use 'layout/footer' as footer-layout;
 
 @use 'components/button';
+@use 'components/navigation';
 @use 'components/header';
 @use 'components/features';
 @use 'components/story';

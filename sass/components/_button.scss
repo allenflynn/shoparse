@@ -14,12 +14,21 @@
     background-color: var(--color-primary-dark);
   }
 
-  &--client {
-    grid-column: span 2;
+  &--contact {
+    padding: 1rem;
+    text-transform: none;
+    background-color: var(--color-grey-dark-2);
+    &:hover {
+      background-color: var(--color-grey-dark-1);
+    }
   }
 
-  &--banner {
+  &--scroll {
     justify-self: start;
     align-self: start;
+  }
+
+  &--client {
+    grid-column: span 2;
   }
 }

@@ -1,0 +1,28 @@
+.nav {
+  background-color: var(--color-primary-dark);
+  padding: 0 9%;
+
+  &__logo {
+    height: 4rem;
+  }
+
+  &__items {
+    list-style: none;
+    font-size: 1.6rem;
+  }
+
+  &__item {
+    margin-left: 2.5rem;
+  }
+
+  &__link:link,
+  &__link:visited {
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  &__link:hover,
+  &__link:active {
+    color: rgba(#fff, 0.6);
+  }
+}

@@ -20,9 +20,6 @@
 
 .nav {
   grid-column: full-start / full-end;
-  display: flex;
-  justify-content: space-between;
-  background-color: yellow;
 }
 
 .header {
@@ -64,7 +61,6 @@
 
 .clients {
   grid-column: center-start / center-end;
-  margin: 15rem 0;
 }
 
 .testimonials {

@@ -441,9 +441,6 @@ body {
 
 .nav {
   grid-column: full-start/full-end;
-  display: flex;
-  justify-content: space-between;
-  background-color: yellow;
 }
 
 .header__main {
@@ -486,7 +483,6 @@ body {
 
 .clients {
   grid-column: center-start/center-end;
-  margin: 15rem 0;
 }
 
 .testimonials {
@@ -496,6 +492,16 @@ body {
 
 .footer {
   grid-column: full-start/full-end;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__items {
+  display: flex;
+  align-items: center;
 }
 
 .header__main {
@@ -622,12 +628,43 @@ body {
 .btn:hover {
   background-color: var(--color-primary-dark);
 }
+.btn--contact {
+  padding: 1rem;
+  text-transform: none;
+  background-color: var(--color-grey-dark-2);
+}
+.btn--contact:hover {
+  background-color: var(--color-grey-dark-1);
+}
+.btn--scroll {
+  justify-self: start;
+  align-self: start;
+}
 .btn--client {
   grid-column: span 2;
 }
-.btn--banner {
-  justify-self: start;
-  align-self: start;
+
+.nav {
+  background-color: var(--color-primary-dark);
+  padding: 0 9%;
+}
+.nav__logo {
+  height: 4rem;
+}
+.nav__items {
+  list-style: none;
+  font-size: 1.6rem;
+}
+.nav__item {
+  margin-left: 2.5rem;
+}
+.nav__link:link, .nav__link:visited {
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.nav__link:hover, .nav__link:active {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .header__main {
@@ -679,7 +716,7 @@ body {
 }
 
 .features {
-  margin: 15rem 0;
+  padding: 15rem 0;
 }
 
 .feature__icon {
@@ -716,6 +753,10 @@ body {
 .story__content {
   background-color: var(--color-grey-light-1);
   padding: 6rem 6vw;
+}
+
+.clients {
+  padding: 15rem 0;
 }
 
 .client {
