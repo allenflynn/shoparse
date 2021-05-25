@@ -1,0 +1,30 @@
+.clients {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 5rem;
+}
+
+.client {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+
+  &__img {
+    grid-area: 1 / 1 / -1 / -1;
+  }
+
+  &__name {
+    grid-area: 1 / 1 / -1 / -1;
+    justify-self: center;
+    align-self: end;
+    z-index: 1;
+  }
+
+  &__location,
+  &__traffic,
+  &__type,
+  &__industry {
+    display: flex;
+    align-items: center;
+  }
+}

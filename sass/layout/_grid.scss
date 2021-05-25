@@ -1,21 +1,39 @@
 @use '../abstracts/variables';
 
-.header {
+.container {
+  display: grid;
+  grid-template-rows: 9rem 80vh min-content 35vw repeat(3, min-content);
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 15rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
+
+  @media (max-width: variables.$bp-medium) {
+    grid-template-rows: 9rem calc(100vh - 9rem) repeat(2, min-content) 35vw repeat(
+        3,
+        min-content
+      );
+  }
+}
+
+.nav {
   grid-column: full-start / full-end;
   display: flex;
   justify-content: space-between;
   background-color: yellow;
 }
 
-.hero-banner {
-  &__left {
+.header {
+  &__main {
     grid-column: full-start / col-end -3;
 
     @media (max-width: variables.$bp-medium) {
       grid-column: full-start / full-end;
     }
   }
-  &__right {
+  &__aside {
     grid-column: col-end -3 / full-end;
 
     @media (max-width: variables.$bp-medium) {
@@ -56,22 +74,4 @@
 
 .footer {
   grid-column: full-start / full-end;
-}
-
-.container {
-  display: grid;
-  grid-template-rows: 9rem 80vh min-content 35vw repeat(3, min-content);
-  grid-template-columns:
-    [full-start] minmax(6rem, 1fr) [center-start] repeat(
-      8,
-      [col-start] minmax(min-content, 15rem) [col-end]
-    )
-    [center-end] minmax(6rem, 1fr) [full-end];
-
-  @media (max-width: variables.$bp-medium) {
-    grid-template-rows: 9rem calc(100vh - 9rem) repeat(2, min-content) 35vw repeat(
-        3,
-        min-content
-      );
-  }
 }

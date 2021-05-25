@@ -11,18 +11,22 @@
     <title>Shoparse Web Development</title>
   </head>
   <body class="container">
-    <header class="header">
-      <div class="logo">logo</div>
-      <nav class="nav">nav</nav>
-    </header>
+    <nav class="nav">
+      <img src="" alt="logo" class="nav__logo" />
+      <ul class="nav__items">
+        <li class="nav__item"><a href="" class="nav__link">link 1</a></li>
+        <li class="nav__item"><a href="" class="nav__link">link 2</a></li>
+        <li class="nav__item"><a href="" class="nav__link">link 3</a></li>
+      </ul>
+    </nav>
 
-    <div class="hero-banner__left">
+    <div class="header__main">
       <div class="placeholder"></div>
       <h3 class="heading-3">Your own web:</h3>
       <h1 class="heading-1">Start your business from here</h1>
       <button class="btn btn--banner">Learn more</button>
       <div class="services__title">Services</div>
-      <ul class="services__list">
+      <ul class="services__list heading-4">
         <li>Website Design</li>
         <li>Website Development</li>
         <li>Website Audit</li>
@@ -30,9 +34,9 @@
       </ul>
     </div>
 
-    <div class="hero-banner__right specialties">
+    <div class="header__aside">
       <h3 class="heading-3">Industry Specialties</h3>
-      <div class="specialties__list">
+      <div class="specialties">
         <div class="circular--landscape">
           <img
             src="img/electronics.jpg"
@@ -55,17 +59,6 @@
         <div class="specialties__info">
           <h4 class="heading-4 heading-4--light">Computers & Electronics</h4>
         </div>
-
-        <!-- <div class="circular--landscape">
-          <img
-            src="img/electronics.jpg"
-            alt="electronics"
-            class="specialties__img"
-          />
-        </div>
-        <div class="specialties__info">
-          <h4 class="heading-4 heading-4--light">Fashion & Accessories</h4>
-        </div> -->
 
         <div class="circular--landscape">
           <img
@@ -295,13 +288,25 @@
     <section class="testimonials">testimonials</section>
 
     <footer class="footer">
-      <ul class="nav">
-        <li class="nav__item"><a href="#" class="nav__link">footer 1</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">footer 2</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">footer 3</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">footer 4</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">footer 5</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">footer 6</a></li>
+      <ul class="footer__items">
+        <li class="footer__item">
+          <a href="#" class="footer__link">footer 1</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">footer 2</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">footer 3</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">footer 4</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">footer 5</a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">footer 6</a>
+        </li>
       </ul>
 
       <p class="copyright">&copy; Copyright 2021 by Allen Flynn</p>

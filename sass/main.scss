@@ -7,9 +7,14 @@
 @use 'base/typography';
 
 @use 'layout/grid';
+@use 'layout/header' as header-layout;
+@use 'layout/features' as features-layout;
+@use 'layout/story' as story-layout;
+@use 'layout/clients' as clients-layout;
+@use 'layout/footer' as footer-layout;
 
 @use 'components/button';
-@use 'components/hero-banner';
+@use 'components/header';
 @use 'components/features';
 @use 'components/story';
 @use 'components/clients';
