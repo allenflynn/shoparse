@@ -3,10 +3,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link
+    <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,400&family=Nunito:ital,wght@0,300;1,300&display=swap"
       rel="stylesheet"
-    /> -->
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Shoparse Web Development</title>
   </head>
@@ -15,7 +15,7 @@
       <img src="" alt="logo" class="nav__logo" />
       <ul class="nav__items">
         <li class="nav__item">
-          <a href="#features" class="nav__link">Features</a>
+          <a href="#story" class="nav__link">Story</a>
         </li>
         <li class="nav__item">
           <a href="#clients" class="nav__link">Clients</a>
@@ -149,14 +149,16 @@
       </div>
     </section>
 
-    <div class="story__pictures">
+    <div class="story__pictures" id="story">
       <img
         src="img/web-dev-1.jpg"
+        data-src="img/web-dev-1.jpg"
         alt="Web Development"
         class="story__img--1"
       />
       <img
         src="img/web-dev-2.jpg"
+        data-src="img/web-dev-2.jpg"
         alt="Web Development"
         class="story__img--2"
       />
@@ -175,36 +177,6 @@
     </div>
 
     <section class="clients" id="clients">
-      <!-- <div class="client">
-        <img src="img/openbox.jpg" alt="openbox.ca" class="client__img" />
-        <h5 class="client__name">openbox.ca</h5>
-        <div class="client__location">
-          <svg>
-            <use xlink:href="img/sprite.svg#icon-emoji-happy"></use>
-          </svg>
-          <p>Surrey</p>
-        </div>
-        <div class="client__traffic">
-          <svg>
-            <use xlink:href="img/sprite.svg#icon-emoji-happy"></use>
-          </svg>
-          <p>80,000</p>
-        </div>
-        <div class="client__type">
-          <svg>
-            <use xlink:href="img/sprite.svg#icon-emoji-happy"></use>
-          </svg>
-          <p>Corporation</p>
-        </div>
-        <div class="client__industry">
-          <svg>
-            <use xlink:href="img/sprite.svg#icon-emoji-happy"></use>
-          </svg>
-          <p>Electronics</p>
-        </div>
-        <button class="btn btn--client">Show case</button>
-      </div> -->
-
       <div class="client">
         <img src="img/openbox.jpg" alt="openbox.ca" class="client__img" />
         <h5 class="client__name">openbox.ca</h5>
@@ -296,7 +268,16 @@
       </div>
     </section>
 
-    <section class="testimonials" id="testimonials">testimonials</section>
+    <div class="testimonials" id="testimonials">
+      <div class="slider">
+        <div class="slide"><img src="img/web-dev-1.jpg" alt="Photo 1" /></div>
+        <div class="slide"><img src="img/web-dev-2.jpg" alt="Photo 2" /></div>
+        <div class="slide"><img src="img/web-dev.jpg" alt="Photo 3" /></div>
+        <button class="slider__btn slider__btn--left">&larr;</button>
+        <button class="slider__btn slider__btn--right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
+    </div>
 
     <footer class="footer">
       <ul class="footer__items">

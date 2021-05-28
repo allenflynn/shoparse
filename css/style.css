@@ -462,6 +462,7 @@ body {
 
 .features {
   grid-column: center-start/center-end;
+  padding: 15rem 0;
 }
 
 .story__pictures {
@@ -483,15 +484,26 @@ body {
 
 .clients {
   grid-column: center-start/center-end;
+  padding-top: 15rem;
 }
 
 .testimonials {
   grid-column: center-start/center-end;
-  background-color: chartreuse;
+  padding: 15rem 0;
 }
 
 .footer {
   grid-column: full-start/full-end;
+}
+
+.container > div,
+section {
+  transition: all 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(3rem);
 }
 
 .nav {
@@ -607,9 +619,12 @@ body {
   align-items: center;
 }
 
+.footer {
+  padding: 5rem;
+}
 .footer__items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 3rem;
 }
 
@@ -631,7 +646,7 @@ body {
 .btn--contact {
   padding: 1rem;
   text-transform: none;
-  background-color: var(--color-grey-dark-2);
+  background-color: var(--color-secondary);
 }
 .btn--contact:hover {
   background-color: var(--color-grey-dark-1);
@@ -642,6 +657,60 @@ body {
 }
 .btn--client {
   grid-column: span 2;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  border: none;
+}
+.slider__btn--left {
+  left: 2.5%;
+  transform: translateY(-50%);
+}
+.slider__btn--right {
+  right: 2.5%;
+  transform: translateY(-50%);
+}
+
+.slider {
+  position: relative;
+  height: 50rem;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  transition: all 0.5s;
+}
+.slide img {
+  width: 100%;
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dots__dot {
+  border: none;
+  height: 1.2rem;
+  width: 1.2rem;
+  background-color: #b9b9b9;
+  opacity: 0.6;
+  border-radius: 50%;
+  margin-right: 2rem;
+  cursor: pointer;
+}
+.dots__dot--active {
+  background-color: #fff;
+  opacity: 1;
 }
 
 .nav {
@@ -665,6 +734,11 @@ body {
 }
 .nav__link:hover, .nav__link:active {
   color: rgba(255, 255, 255, 0.6);
+}
+.nav.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 
 .header__main {
@@ -715,10 +789,6 @@ body {
   margin-left: -1rem;
 }
 
-.features {
-  padding: 15rem 0;
-}
-
 .feature__icon {
   transform: translateY(-0.8rem);
   height: 4.5rem;
@@ -755,10 +825,6 @@ body {
   padding: 6rem 6vw;
 }
 
-.clients {
-  padding: 15rem 0;
-}
-
 .client {
   background-color: var(--color-grey-light-1);
 }
@@ -793,7 +859,6 @@ body {
 
 .footer {
   background-color: var(--color-secondary);
-  padding: 5rem;
 }
 .footer__items {
   list-style: none;

@@ -41,6 +41,7 @@
 
 .features {
   grid-column: center-start / center-end;
+  padding: 15rem 0;
 }
 
 .story {
@@ -61,13 +62,25 @@
 
 .clients {
   grid-column: center-start / center-end;
+  padding-top: 15rem;
 }
 
 .testimonials {
   grid-column: center-start / center-end;
-  background-color: chartreuse;
+  padding: 15rem 0;
 }
 
 .footer {
   grid-column: full-start / full-end;
+}
+
+// To be continue
+
+.container > div,
+section {
+  transition: all 1s;
+}
+.section--hidden {
+  opacity: 0;
+  transform: translateY(3rem);
 }

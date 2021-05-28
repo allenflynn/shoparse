@@ -25,4 +25,10 @@
   &__link:active {
     color: rgba(#fff, 0.6);
   }
+
+  &.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+  }
 }

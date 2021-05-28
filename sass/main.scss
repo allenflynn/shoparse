@@ -12,9 +12,11 @@
 @use 'layout/features' as features-layout;
 @use 'layout/story' as story-layout;
 @use 'layout/clients' as clients-layout;
+@use 'layout/testimonials' as testimonials-layout;
 @use 'layout/footer' as footer-layout;
 
 @use 'components/button';
+@use 'components/carousel';
 @use 'components/navigation';
 @use 'components/header';
 @use 'components/features';
