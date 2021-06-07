@@ -1,9 +1,10 @@
 .nav {
   background-color: var(--color-primary-dark);
-  padding: 0 9%;
+  box-shadow: 0 2rem 5rem rgb(0 0 0 / 10%);
+  padding: 0 6vw;
 
   &__logo {
-    height: 4rem;
+    height: 5rem;
   }
 
   &__items {
@@ -12,7 +13,7 @@
   }
 
   &__item {
-    margin-left: 2.5rem;
+    padding-left: 3vw;
   }
 
   &__link:link,

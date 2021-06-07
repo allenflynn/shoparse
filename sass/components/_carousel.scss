@@ -1,17 +1,20 @@
 .slider {
   position: relative;
-  height: 50rem;
+  height: 39rem;
   overflow: hidden;
+
+  // max-width: 100rem;
+  // margin: 0 auto;
 }
 
 .slide {
+  display: flex;
+  align-items: center;
+
   position: absolute;
+  height: 35rem;
   width: 100%;
   transition: all 0.5s;
-
-  img {
-    width: 100%;
-  }
 }
 
 .dots {
@@ -30,7 +33,7 @@
     margin-right: 2rem;
     cursor: pointer;
     &--active {
-      background-color: #fff;
+      background-color: var(--color-grey-dark-2);
       opacity: 1;
     }
   }

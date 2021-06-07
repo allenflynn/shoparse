@@ -1,6 +1,6 @@
 .btn {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
   background-color: var(--color-primary);
   padding: 1.5rem 3rem;
@@ -35,19 +35,20 @@
 
 .slider__btn {
   position: absolute;
-  top: 50%;
+  top: 100%;
   font-size: 2.5rem;
   border-radius: 50%;
   height: 5rem;
   width: 5rem;
   border: none;
+  color: var(--color-grey-dark-2);
 
   &--left {
-    left: 2.5%;
-    transform: translateY(-50%);
+    left: 6vw;
+    transform: translateY(-100%);
   }
   &--right {
-    right: 2.5%;
-    transform: translateY(-50%);
+    right: 6vw;
+    transform: translateY(-100%);
   }
 }

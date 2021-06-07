@@ -1,0 +1,43 @@
+.testimonials {
+  background-color: var(--color-grey-light-1);
+}
+
+.testimonial {
+  padding: 3rem;
+
+  &::before {
+    content: "\201C";
+    position: absolute;
+    top: -1.6rem;
+    left: -1.6rem;
+    font-size: 20rem;
+    color: #dfdfdf;
+    font-family: sans-serif;
+    line-height: 1;
+  }
+  &__text {
+    position: relative;
+    z-index: 1;
+  }
+  &__author {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    gap: 0 2rem;
+  }
+  &__name {
+    align-self: end;
+
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+  &__photo {
+    grid-row: 1 / span 2;
+
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+  }
+  &__location {
+    font-size: 1.2rem;
+  }
+}

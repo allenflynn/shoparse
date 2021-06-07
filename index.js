@@ -21,7 +21,7 @@ btnScroll.addEventListener("click", function (e) {
   const featuresRect = features.getBoundingClientRect();
   window.scroll({
     left: 0,
-    top: featuresRect.top + window.pageYOffset - navHeight,
+    top: featuresRect.top + window.pageYOffset - navHeight + 1,
     behavior: "smooth",
   });
 });
@@ -34,7 +34,7 @@ document.querySelector(".nav__items").addEventListener("click", function (e) {
     const elRect = document.querySelector(id).getBoundingClientRect();
     window.scroll({
       left: 0,
-      top: elRect.top + window.pageYOffset - navHeight,
+      top: elRect.top + window.pageYOffset - navHeight + 1,
       behavior: "smooth",
     });
   }
@@ -42,18 +42,18 @@ document.querySelector(".nav__items").addEventListener("click", function (e) {
 
 // Reveal sections
 const revealSection = (entries, observer) => {
-  const [entry] = entries;
-  if (!entry.isIntersecting) return;
-  else entry.target.classList.remove("section--hidden");
-  observer.unobserve(entry.target);
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    else entry.target.classList.remove("section--hidden");
+    observer.unobserve(entry.target);
+  });
 };
 const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
-  threshold: 0.2,
+  threshold: 0.16,
 });
-
-const hiddenSections = document.querySelectorAll("section");
-hiddenSections.forEach((section) => {
+const sections = document.querySelectorAll("section");
+sections.forEach((section) => {
   section.classList.add("section--hidden");
   sectionObserver.observe(section);
 });

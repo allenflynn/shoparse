@@ -2,13 +2,26 @@
 
 .container {
   display: grid;
-  grid-template-rows: 9rem 80vh min-content 35vw repeat(3, min-content);
+  grid-template-rows: 9rem 80vh min-content 35vw repeat(4, min-content);
   grid-template-columns:
     [full-start] minmax(6rem, 1fr) [center-start] repeat(
       8,
       [col-start] minmax(min-content, 15rem) [col-end]
     )
     [center-end] minmax(6rem, 1fr) [full-end];
+
+  &::before,
+  &::after {
+    content: "";
+    background-color: var(--color-grey-light-1);
+  }
+
+  &::before {
+    grid-area: 6 / 1 / 7 / 3;
+  }
+  &::after {
+    grid-area: 6 / -1 / 7 / -3;
+  }
 
   @media (max-width: variables.$bp-medium) {
     grid-template-rows: 9rem calc(100vh - 9rem) repeat(2, min-content) 35vw repeat(
@@ -62,12 +75,21 @@
 
 .clients {
   grid-column: center-start / center-end;
-  padding-top: 15rem;
+  padding: 15rem 0;
 }
 
 .testimonials {
-  grid-column: center-start / center-end;
-  padding: 15rem 0;
+  grid-column: col-start 2 / col-end -2;
+  padding: 15rem 6vw;
+
+  @media (max-width: variables.$bp-medium) {
+    grid-column: full-start / full-end;
+  }
+}
+
+.contact {
+  grid-column: full-start / full-end;
+  padding: 15rem 6vw;
 }
 
 .footer {
