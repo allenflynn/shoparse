@@ -1,0 +1,29 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 10rem 18vw 10rem 6vw;
+  z-index: 1000;
+
+  &__close {
+    position: fixed;
+    top: 2rem;
+    right: 6vw;
+    background: transparent;
+    color: white;
+    font-family: inherit;
+    font-size: 4rem;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__content {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+}

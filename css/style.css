@@ -517,7 +517,6 @@ body {
   grid-column: full-start/full-end;
 }
 
-.container > div,
 section {
   transition: all 1s;
 }
@@ -657,6 +656,24 @@ section {
   gap: 3rem;
 }
 
+.form {
+  display: grid;
+  gap: 2.5rem;
+}
+.form__input {
+  position: relative;
+}
+.form__input label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 1.6rem;
+}
+.form__input input {
+  font-size: 16px;
+  padding: 1.5rem 1rem;
+  width: 100%;
+}
+
 .btn {
   font-family: var(--font-display);
   font-size: 1.6rem;
@@ -672,6 +689,13 @@ section {
 .btn:hover {
   background-color: var(--color-primary-dark);
 }
+.btn--scroll {
+  justify-self: start;
+  align-self: start;
+}
+.btn--client {
+  grid-column: span 2;
+}
 .btn--contact {
   padding: 1rem;
   text-transform: none;
@@ -680,12 +704,8 @@ section {
 .btn--contact:hover {
   background-color: var(--color-grey-dark-1);
 }
-.btn--scroll {
+.btn--form {
   justify-self: start;
-  align-self: start;
-}
-.btn--client {
-  grid-column: span 2;
 }
 
 .slider__btn {
@@ -757,6 +777,13 @@ section {
 }
 .nav__item {
   padding-left: 3vw;
+}
+.nav__item a[href="#contact-form"] {
+  padding: 1rem;
+  background-color: var(--color-secondary);
+}
+.nav__item a[href="#contact-form"]:hover {
+  background-color: var(--color-grey-dark-1);
 }
 .nav__link:link, .nav__link:visited {
   color: white;
@@ -934,6 +961,16 @@ section {
   border-bottom: 1px solid var(--color-grey-dark-1);
 }
 
+#contact-form {
+  display: none;
+  opacity: 0;
+  transition: all 0.5s;
+}
+#contact-form:target {
+  display: block;
+  opacity: 1;
+}
+
 .footer {
   background-color: var(--color-secondary);
 }
@@ -959,6 +996,34 @@ section {
   color: var(--color-grey-light-2);
   margin-top: 5rem;
   text-align: center;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+  background-color: var(--color-secondary);
+  color: white;
+  padding: 10rem 18vw 10rem 6vw;
+  z-index: 1000;
+}
+.modal__close {
+  position: fixed;
+  top: 2rem;
+  right: 6vw;
+  background: transparent;
+  color: white;
+  font-family: inherit;
+  font-size: 4rem;
+  border: none;
+  cursor: pointer;
+}
+.modal__content {
+  max-width: 50rem;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */

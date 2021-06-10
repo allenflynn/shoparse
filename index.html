@@ -15,21 +15,18 @@
       <a href="/" class="nav__logo-link"
         ><img src="" alt="logo" class="nav__logo"
       /></a>
-
       <ul class="nav__items">
         <li class="nav__item">
-          <a href="#story" class="nav__link">Story</a>
+          <a href="#story" class="nav__link">Ecommerce</a>
         </li>
         <li class="nav__item">
-          <a href="#clients" class="nav__link">Clients</a>
+          <a href="#clients" class="nav__link">Portfolio</a>
         </li>
         <li class="nav__item">
-          <a href="#testimonials" class="nav__link">Testimonials</a>
+          <a href="#testimonials" class="nav__link">Testimonial</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__link"
-            ><button class="btn btn--contact">Contact</button></a
-          >
+          <a href="#contact-form" class="nav__link">Contact</a>
         </li>
       </ul>
     </nav>
@@ -335,12 +332,12 @@
         <div class="dots"></div>
       </div>
     </div>
-    <section class="contact">
+    <section class="contact" id="contact">
       <h3 class="heading-3 mb-sm">Not sure yet?</h3>
       <h2 class="heading-2 mb-md">
         Contact today for planning the future of your business
       </h2>
-      <button class="btn">contact</button>
+      <a href="#contact-form"><button class="btn">contact</button></a>
     </section>
     <footer class="footer">
       <ul class="footer__items">
@@ -365,6 +362,30 @@
       </ul>
       <p class="copyright">&copy; Copyright 2021 by Allen Flynn</p>
     </footer>
+
+    <div id="contact-form">
+      <div class="modal">
+        <a href="#"><button class="modal__close">&times;</button></a>
+        <div class="modal__content">
+          <h2 class="heading-2 mb-lg">Contact Shoparse</h2>
+          <form class="form">
+            <div class="form__input">
+              <label>First Name</label>
+              <input type="text" />
+            </div>
+            <div class="form__input">
+              <label>Last Name</label>
+              <input type="text" />
+            </div>
+            <div class="form__input">
+              <label>Email Address</label>
+              <input type="email" />
+            </div>
+            <button class="btn btn--form">Next step →</button>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <script src="index.js"></script>
   </body>

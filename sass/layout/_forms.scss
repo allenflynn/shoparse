@@ -1,0 +1,20 @@
+.form {
+  display: grid;
+  gap: 2.5rem;
+
+  &__input {
+    position: relative;
+
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-size: 1.6rem;
+    }
+
+    input {
+      font-size: 16px;
+      padding: 1.5rem 1rem;
+      width: 100%;
+    }
+  }
+}

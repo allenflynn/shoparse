@@ -14,6 +14,14 @@
 
   &__item {
     padding-left: 3vw;
+
+    a[href="#contact-form"] {
+      padding: 1rem;
+      background-color: var(--color-secondary);
+      &:hover {
+        background-color: var(--color-grey-dark-1);
+      }
+    }
   }
 
   &__link:link,

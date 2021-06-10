@@ -15,6 +15,7 @@
 @use 'layout/testimonials' as testimonials-layout;
 @use 'layout/contact' as contact-layout;
 @use 'layout/footer' as footer-layout;
+@use 'layout/forms';
 
 @use 'components/button';
 @use 'components/carousel';
@@ -26,4 +27,4 @@
 @use 'components/testimonials';
 @use 'components/contact';
 @use 'components/footer';
-@use 'components/popup';
+@use 'components/modal';

@@ -31,12 +31,16 @@ document.querySelector(".nav__items").addEventListener("click", function (e) {
   e.preventDefault();
   if (e.target.classList.contains("nav__link")) {
     const id = e.target.getAttribute("href");
-    const elRect = document.querySelector(id).getBoundingClientRect();
-    window.scroll({
-      left: 0,
-      top: elRect.top + window.pageYOffset - navHeight + 1,
-      behavior: "smooth",
-    });
+    if (id === "#contact-form") {
+      window.location.href = "#contact-form";
+    } else {
+      const elRect = document.querySelector(id).getBoundingClientRect();
+      window.scroll({
+        left: 0,
+        top: elRect.top + window.pageYOffset - navHeight + 1,
+        behavior: "smooth",
+      });
+    }
   }
 });
 
@@ -124,4 +128,11 @@ btnLeft.addEventListener("click", () => nextSlide(false));
 document.addEventListener("keydown", function (e) {
   e.key === "ArrowLeft" && nextSlide(false);
   e.key === "ArrowRight" && nextSlide(true);
+});
+
+// Prevent page scrolling when the modal is open
+const container = document.querySelector(".container");
+window.addEventListener("hashchange", function () {
+  container.style.overflow =
+    window.location.hash === "#contact-form" ? "hidden" : "visible";
 });
