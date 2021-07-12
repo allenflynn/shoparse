@@ -2,65 +2,45 @@
   font-family: var(--font-display);
   font-weight: 400;
 }
+$heading-sizes: (
+  ".heading-1": 5rem,
+  ".heading-2": 4rem,
+  ".heading-3": 1.6rem,
+  ".heading-4": 1.8rem,
+);
+@each $class, $size in $heading-sizes {
+  #{$class} {
+    @extend %heading;
+    font-size: $size;
 
+    &--light {
+      color: var(--color-grey-light-1);
+    }
+    &--dark {
+      color: var(--color-grey-dark-1);
+    }
+  }
+}
 .heading-1 {
-  @extend %heading;
-  font-size: 5rem;
   color: var(--color-grey-light-1);
 }
-
 .heading-2 {
-  @extend %heading;
-
-  font-size: 4rem;
   font-style: italic;
   line-height: 1;
-
-  &--light {
-    color: var(--color-grey-light-1);
-  }
-  &--dark {
-    color: var(--color-grey-dark-1);
-  }
 }
-
 .heading-3 {
-  @extend %heading;
-
-  font-size: 1.6rem;
   color: var(--color-primary);
   text-transform: uppercase;
+}
 
-  &--light {
-    color: var(--color-grey-light-1);
+$margin-bottoms: (
+  ".mb-sm": 2rem,
+  ".mb-md": 3rem,
+  ".mb-lg": 4rem,
+  ".mb-hg": 8rem,
+);
+@each $class, $margin in $margin-bottoms {
+  #{$class} {
+    margin-bottom: $margin;
   }
-  &--dark {
-    color: var(--color-grey-dark-1);
-  }
-}
-
-.heading-4 {
-  @extend %heading;
-
-  font-size: 1.8rem;
-
-  &--light {
-    color: var(--color-grey-light-1);
-  }
-  &--dark {
-    color: var(--color-grey-dark-1);
-  }
-}
-
-.mb-sm {
-  margin-bottom: 2rem;
-}
-.mb-md {
-  margin-bottom: 3rem;
-}
-.mb-lg {
-  margin-bottom: 4rem;
-}
-.mb-hg {
-  margin-bottom: 8rem;
 }

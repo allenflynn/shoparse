@@ -1,21 +1,10 @@
-@use 'abstracts/functions';
-@use 'abstracts/mixins';
-@use 'abstracts/placeholder';
-@use 'abstracts/variables';
+// @use 'abstracts/functions';
+// @use 'abstracts/mixins';
+// @use 'abstracts/placeholder';
+// @use 'abstracts/variables';
 
 @use 'base/reset';
 @use 'base/typography';
-
-@use 'layout/grid';
-@use 'layout/navigation' as navigation-layout;
-@use 'layout/header' as header-layout;
-@use 'layout/features' as features-layout;
-@use 'layout/story' as story-layout;
-@use 'layout/clients' as clients-layout;
-@use 'layout/testimonials' as testimonials-layout;
-@use 'layout/contact' as contact-layout;
-@use 'layout/footer' as footer-layout;
-@use 'layout/forms';
 
 @use 'components/button';
 @use 'components/carousel';
@@ -28,3 +17,14 @@
 @use 'components/contact';
 @use 'components/footer';
 @use 'components/modal';
+
+@use 'layout/grid';
+@use 'layout/navigation' as navigation-layout;
+@use 'layout/header' as header-layout;
+@use 'layout/features' as features-layout;
+@use 'layout/story' as story-layout;
+@use 'layout/clients' as clients-layout;
+@use 'layout/testimonials' as testimonials-layout;
+@use 'layout/contact' as contact-layout;
+@use 'layout/footer' as footer-layout;
+@use 'layout/forms';

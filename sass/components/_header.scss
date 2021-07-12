@@ -1,4 +1,4 @@
-@use '../abstracts/variables';
+@use '../abstracts' as *;
 
 .header {
   &__main {
@@ -31,7 +31,7 @@
         letter-spacing: -0.1px;
         color: rgba(255, 255, 255, 0.6);
 
-        @media (max-width: variables.$bp-small) {
+        @media (max-width: $bp-small) {
           font-size: 1.4rem;
         }
       }

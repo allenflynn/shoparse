@@ -36,23 +36,3 @@
     justify-self: start;
   }
 }
-
-.slider__btn {
-  position: absolute;
-  top: 100%;
-  font-size: 2.5rem;
-  border-radius: 50%;
-  height: 5rem;
-  width: 5rem;
-  border: none;
-  color: var(--color-grey-dark-2);
-
-  &--left {
-    left: 6vw;
-    transform: translateY(-100%);
-  }
-  &--right {
-    right: 6vw;
-    transform: translateY(-100%);
-  }
-}

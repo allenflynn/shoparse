@@ -1,0 +1,13 @@
+@use "sass:map";
+@use "variables" as *;
+
+@mixin media($key) {
+  $size: map.get($breakpoints, $key);
+  @media (max-width: $size) {
+    @if #{&} == ".container" {
+      @content;
+    } @else {
+      grid-column: full-start / full-end;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-@use '../abstracts/variables';
+@use '../abstracts' as *;
 
 .container {
   display: grid;
@@ -23,7 +23,7 @@
     grid-area: 6 / -1 / 7 / -3;
   }
 
-  @media (max-width: variables.$bp-medium) {
+  @include media(medium) {
     grid-template-rows: 9rem calc(100vh - 9rem) repeat(2, min-content) 35vw repeat(
         3,
         min-content
@@ -39,16 +39,12 @@
   &__main {
     grid-column: full-start / col-end -3;
 
-    @media (max-width: variables.$bp-medium) {
-      grid-column: full-start / full-end;
-    }
+    @include media(medium);
   }
   &__aside {
     grid-column: col-end -3 / full-end;
 
-    @media (max-width: variables.$bp-medium) {
-      grid-column: full-start / full-end;
-    }
+    @include media(medium);
   }
 }
 
@@ -61,15 +57,12 @@
   &__pictures {
     grid-column: full-start / col-start 5;
 
-    @media (max-width: variables.$bp-medium) {
-      grid-column: full-start / full-end;
-    }
+    @include media(medium);
   }
   &__content {
     grid-column: col-start 5 / full-end;
-    @media (max-width: variables.$bp-medium) {
-      grid-column: full-start / full-end;
-    }
+
+    @include media(medium);
   }
 }
 
@@ -82,9 +75,7 @@
   grid-column: col-start 2 / col-end -2;
   padding: 15rem 6vw;
 
-  @media (max-width: variables.$bp-medium) {
-    grid-column: full-start / full-end;
-  }
+  @include media(medium);
 }
 
 .contact {
